@@ -1,0 +1,33 @@
+.accordian {
+  width: 400px;
+  /* height: 100px; */
+  margin: 20px auto;
+  /* font-family: Arial, sans-serif; */
+  border: 1px solid #ccc;
+}
+
+.accordion_item {
+  border-bottom: 1px solid #ccc;
+}
+
+.accordion_header {
+  width: 100%;
+  padding: 10px;
+  background: #f1f1f1;
+  border: none;
+  text-align: left;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion_content {
+  padding: 10px;
+  background: #fff;
+  font-size: 14px;
+}
+
+.accordian_icon {
+}
