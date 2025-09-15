@@ -8,11 +8,13 @@ function App() {
   const [page, setPage] = useState(1);
   const { movies, loading, error, totalPages } = useMovies(query, page);
   return (
-    <div>
-      <h1>Movie Explorer</h1>
+    <div className="app">
+      <h1 className="header">Movie Explorer</h1>
       <input
         type="text"
+        placeholder="Search Movie Name here"
         value={query}
+        className="input_box"
         onChange={(e) => {
           setQuery(e.target.value);
           setPage(1);
@@ -21,9 +23,16 @@ function App() {
       {error && <p>{error}</p>}
       {loading && <p>Loading</p>}
 
-      <div>
+      {movies.length > 0 && (
+        <Pagination
+          page={page}
+          totalPages={totalPages}
+          onPageChange={setPage}
+        />
+      )}
+      <div className="movies_grid">
         {movies.map((movie) => (
-          <div key={movie.id}>
+          <div key={movie.id} className="movie_card">
             <img
               src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`}
               alt={movie.title}
@@ -32,9 +41,13 @@ function App() {
           </div>
         ))}
       </div>
-      {movies.length > 0 && (
-        <Pagination page={page} totalPages={totalPages} onPageChang={setPage} />
-      )}
+      {/* {movies.length > 0 && (
+        <Pagination
+          page={page}
+          totalPages={totalPages}
+          onPageChange={setPage}
+        />
+      )} */}
     </div>
   );
 }
