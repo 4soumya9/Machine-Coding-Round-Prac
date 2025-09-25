@@ -39,3 +39,24 @@ const Accordian = () => {
 };
 
 export default Accordian;
+
+
+/*openIndex === index → This checks if the current item’s index matches the open one. If yes → true, if not → false.
+
+So effectively:
+If isOpen={true} → That accordion item expands.
+
+If isOpen={false} → That accordion item stays collapsed.
+*/
+
+
+/*In JavaScript, the Array.map function always passes its arguments in this order:
+
+array.map((element, index, array) => {
+  // element → the current item in the array
+  // index   → the position of that item (0,1,2,…)
+  // array   → the original array (optional)
+})
+
+item, index -> thats why in these index is in second
+  */

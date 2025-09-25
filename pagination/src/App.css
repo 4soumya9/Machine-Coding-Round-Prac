@@ -79,3 +79,10 @@ The browser tries to fit as many 200px wide cells as possible.
  Then distributes the leftover space evenly using 1fr. 
  
  if 2fr, 2fr means: this column gets 2 shares of free space instead of 1*/
+
+/*Flexbox → 1D (row OR column).
+
+Grid → 2D (row AND column).
+
+👉 Think of Flexbox like arranging books in a single row or stack,
+and Grid like arranging books on a full bookshelf with rows & columns.*/

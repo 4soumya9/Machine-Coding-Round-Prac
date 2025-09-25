@@ -1,0 +1,51 @@
+.app {
+  min-height: 100vh;
+}
+
+.app.light {
+  background-color: #ffff;
+  color: #000;
+}
+
+.app.dark {
+  background-color: #121212;
+  color: #ffff;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.toggle-btn {
+  padding: 8px 14px;
+  border-radius: 20px;
+}
+
+.app.light .toggle-btn {
+  background: #eee;
+  color: #000;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: inherit; /* The color property is inherited by default, but if you explicitly set color: inherit;, it forces the element (a tag here) to take the same color as its parent. */
+}
+
+.app.dark.navbar {
+  background: black;
+  color: antiquewhite;
+}

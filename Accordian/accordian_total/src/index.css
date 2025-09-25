@@ -1,0 +1,26 @@
+.accordion {
+  /* width: 100px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 50vw;
+  min-height: 50vh;
+}
+
+.accordion_item {
+  width: 50%;
+  height: 50%;
+  align-items: center;
+}
+.title {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  text-align: left;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content {
+  width: 100%;
+}
