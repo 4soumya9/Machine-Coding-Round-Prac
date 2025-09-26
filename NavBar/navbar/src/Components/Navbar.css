@@ -1,0 +1,71 @@
+/* navbar container  */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  font-size: 22px;
+}
+
+/* Links Container  */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  color: #00bcd4;
+}
+
+.nav-links a.active {
+  border-bottom: 2px solid black;
+}
+
+/* Hamburger */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  /* margin-right: 20px; */
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: 0.3s;
+}
+
+@media (max-width: 760px) {
+  .nav-links {
+    position: relative;
+    /* position: absolute; */
+    /* right: -100%; */
+    top: 60px;
+    flex-direction: column;
+  }
+}
+
+/* By default, a flex element aligns itself according to the parent container’s rules.
+Your parent (.navbar) has:
+
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+
+This makes first child (logo) go left, and last child (hamburger) go right. ✅
+
+❌ Why it went to the middle */
