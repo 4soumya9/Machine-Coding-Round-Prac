@@ -31,6 +31,34 @@
   border-bottom: 2px solid black;
 }
 
+/* Dropdown  */
+
+.dropdown {
+  position: relative;
+  /* 🔹 2. position: relative
+
+Keeps the element in the normal flow (space is reserved for it).
+
+BUT you can nudge/move it using top, left, right, bottom.
+
+Important: The movement is relative to its normal position. */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 40px;
+  flex-direction: column;
+}
+
+/* Mobile toggle */
+.dropdown-content.show {
+  display: flex;
+  position: static;
+  background: none;
+  padding: 0;
+}
+
 /* Hamburger */
 
 .hamburger {

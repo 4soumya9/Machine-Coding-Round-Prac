@@ -1,0 +1,65 @@
+.app {
+  display: flex; /* make a flex container so we can center children */
+  justify-content: center; /* center horizontally */
+  align-items: center; /* center vertically */
+  height: 100vh; /* make the container as tall as the viewport */
+  padding: 20px; /* small padding so content doesn't touch edges on small screens */
+  box-sizing: border-box;
+  background: #f9fafb;
+  flex-direction: column;
+}
+
+.dropdown {
+  position: relative;
+  width: 300px;
+  max-width: 90%;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  /* border: 1px solid black; */
+}
+
+.dropdown-input {
+  flex: 1;
+  /* flex 1 ensure that take up the remaining spaces  */
+  outline: none;
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0; /*ensure drop down item have same width as input*/
+  max-height: 150px; /* limit height */
+  overflow-y: auto; /*Scroll if too many items */
+  margin-top: 4px;
+  z-index: 1000;
+}
+
+.dropdown-item {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.dropdown-item:hover,
+.dropdown-item.highlighted {
+  background: green; /*hover for mouse and highlighted for keyboard*/
+}
+
+/* responsive */
+
+@media (max-width: 600px) {
+  .dropdown {
+    width: 90%;
+  }
+  .dropdown-input {
+    font-size: 14px;
+  }
+
+  .dropdown-item {
+    font-size: 14px;
+  }
+}
