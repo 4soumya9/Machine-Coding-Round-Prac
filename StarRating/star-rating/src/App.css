@@ -1,0 +1,11 @@
+.star-rating {
+  display: flex;
+  cursor: pointer;
+}
+.star {
+  color: lightgrey;
+}
+
+.star.filled {
+  color: gold;
+}

@@ -7,12 +7,21 @@ const SearchableDropDown = ({ options, placeholder = "Select an option" }) => {
   const [highlightedIndex, setHighlightedIndex] = useState(-1);
   const [selectedValue, setSelectedValue] = useState(null);
 
+  //   const [selectdvalues, setSelectedValues] = useState([]);
+
   const dropdownRef = useRef(null);
 
-  //Filter options based on input
+  //Filter options based on input : single
   const filteredOptions = options.filter((option) =>
     option.toLowerCase().includes(inputValue.toLowerCase())
   );
+
+  //to hide already-selected options from the dropdown  : multi
+  //   const filteredOptions = options.filter((option) => {
+  //     let matchedSearch = option.toLowerCase().includes(inputValue.toLowerCase());
+  //     let notSelected = !selectdvalues.includes(option);
+  //     return matchedSearch && notSelected;
+  //   });
 
   //Close dropdown if clicked outside
   useEffect(() => {
@@ -51,19 +60,38 @@ const SearchableDropDown = ({ options, placeholder = "Select an option" }) => {
 
   const handleSelect = (value) => {
     setSelectedValue(value);
+
+    // for multi
+    // if (!selectdvalues.includes(value)) {
+    //   setSelectedValues([...selectdvalues, value]);
+    // }
+    // setInputValue("");
     setInputValue(value);
     setIsOpen(false);
     setHighlightedIndex(-1);
   };
 
+  // Remove the particular tag for multi
+  //   const removeTag = (value) => {
+  //     setSelectedValues(selectdvalues.filter((item) => item !== value));
+  //   };
+
   const clearSelection = () => {
     setSelectedValue(null);
+    // setSelectedValues([]);
     setInputValue("");
     setIsOpen(false);
   };
   return (
     <div className="dropdown" ref={dropdownRef}>
       <div className="input-wrapper">
+        {/* For multi , just map over the selected values and render tags before input */}
+        {/* {selectdvalues.map((value) => (
+          <span key={value} className="tag">
+            {value}
+            <button onClick={() => removeTag(value)}>X</button>
+          </span>
+        ))} */}
         <input
           type="text"
           className="dropdown-input"
@@ -82,6 +110,12 @@ const SearchableDropDown = ({ options, placeholder = "Select an option" }) => {
             X
           </button>
         )}
+        {/* more multi */}
+        {/* {selectdvalues.length > 0 && (
+          <button className="clear" onClick={clearSelection}>
+            Clear All
+          </button>
+        )} */}
       </div>
 
       {/* dropdown list  */}

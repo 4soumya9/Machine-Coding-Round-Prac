@@ -33,7 +33,7 @@
   top: 100%;
   left: 0;
   right: 0; /*ensure drop down item have same width as input*/
-  max-height: 150px; /* limit height */
+  max-height: 250px; /* limit height */
   overflow-y: auto; /*Scroll if too many items */
   margin-top: 4px;
   z-index: 1000;
@@ -49,6 +49,19 @@
   background: green; /*hover for mouse and highlighted for keyboard*/
 }
 
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+}
+
+.tag-remove {
+  margin-left: 5px;
+}
+
+.clear-btn {
+  margin-left: auto;
+}
 /* responsive */
 
 @media (max-width: 600px) {
