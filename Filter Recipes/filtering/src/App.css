@@ -1,0 +1,30 @@
+.app {
+  text-align: center;
+}
+
+.filter,
+.cart {
+  margin: 15px 0;
+}
+
+.recipes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.recipe-card {
+  /* border: 1px solid black; */
+  padding: 15px;
+  width: 180px;
+}
+
+.recipe-card img {
+  width: 100px;
+  height: 100px;
+}
+
+.recipe-card button:hover {
+  background-color: orange;
+}

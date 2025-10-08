@@ -1,10 +1,10 @@
 import "./App.css";
-import FormValidation from "./components/FormValidation";
+import FilterRecipes from "./components/FilterRecipes";
 
 function App() {
   return (
     <div>
-      <FormValidation />
+      <FilterRecipes />
     </div>
   );
 }
