@@ -4,7 +4,7 @@ import Accordian from "./components/Accordian";
 import AccordianMulti from "./components/AccordianMulti";
 import AccSingle from "./components/PracAcc/AccSingle";
 import Fq from "./components/praccTwo/Faq";
-
+import Accornew from "./components/Practwo/Accordian";
 function App() {
   return (
     <div>
@@ -12,7 +12,8 @@ function App() {
       {/* <Accordian /> */}
       {/* <AccordianMulti /> */}
       {/* <AccSingle /> */}
-      <Fq />
+      {/* <Fq /> */}
+      <Accornew />
     </div>
   );
 }

@@ -41,16 +41,6 @@
   color: #888;
 }
 
-.star-css {
-  cursor: pointer;
-  display: flex;
-}
-
-.tab.active {
-  text-decoration: underline;
-}
-
-.tab.activee {
-  text-decoration: underline;
-  color: green;
+.input.input-error {
+  border: solid red 2px;
 }

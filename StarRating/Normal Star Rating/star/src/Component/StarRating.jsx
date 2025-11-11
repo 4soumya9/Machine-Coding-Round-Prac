@@ -22,3 +22,15 @@ const StarRating = () => {
 };
 
 export default StarRating;
+
+
+// className={`star ${star <= count ? "active" : ""}`}
+
+// .star {
+//   color: gray;
+//   transition: color 0.2s ease;
+// }
+
+// .star.active {
+//   color: gold;
+// }
